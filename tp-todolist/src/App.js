@@ -15,14 +15,17 @@ function App() {
   ]);
     
   return (
-    <div className="container my-5">
-      <h1>Ajouter des choses</h1>
+    <div className="container">
+      <h1 className="container-title">Ajouter des choses</h1>
       <span id="erreur-msg" style={{color: '#FF0000'}}></span>
       <Form setCards={setCards}/>
 
-      {cards.map((card) => (
-        <Card titre={card.titre} message={card.message} id={card.id} key={card.id}/>
-      ))}
+      <div className="card-container">
+        <h2 className="card-container-title">Vos tasks</h2>
+        {cards.map((card) => (
+          <Card titre={card.titre} message={card.message} id={card.id} key={card.id}/>
+        ))}
+      </div>
     </div>
   );
 }

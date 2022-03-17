@@ -17,10 +17,10 @@ export default class Form extends Component {
         
     render() {
         return (
-            <form className="my-5 text-center" onSubmit={this.handleSubmit}>
-                <input type="text" className="form-control mb - 3" placeholder="Titre" onChange={this.getTitle}/>
-                <textarea rows="3" className="form-control mb-3" placeholder="Message" onChange={this.getMessage}/>
-                <button type={"submit"} className="btn btn-primary">C'est parti</button>
+            <form className="form" onSubmit={this.handleSubmit}>
+                <input type="text" className="form-inputs form-title" placeholder="Titre" onChange={this.getTitle}/>
+                <textarea rows="3" className="form-inputs form-msg" placeholder="Message" onChange={this.getMessage}/>
+                <button type={"submit"} className="form-btn">C'est parti</button>
             </form>
         )
     }
